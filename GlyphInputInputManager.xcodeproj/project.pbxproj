@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27297FF605D4994000D540C1 /* NSTextView_GlyphInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 27297FF205D4994000D540C1 /* NSTextView_GlyphInput.h */; };
+		27297FF705D4994000D540C1 /* NSTextView_GlyphInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 27297FF305D4994000D540C1 /* NSTextView_GlyphInput.m */; };
+		27297FF805D4994000D540C1 /* GlyphInputController.h in Headers */ = {isa = PBXBuildFile; fileRef = 27297FF405D4994000D540C1 /* GlyphInputController.h */; };
+		27297FF905D4994000D540C1 /* GlyphInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27297FF505D4994000D540C1 /* GlyphInputController.m */; };
+		27297FFB05D4995600D540C1 /* Info in Resources */ = {isa = PBXBuildFile; fileRef = 27297FFA05D4995600D540C1 /* Info */; };
+		2729801C05D4E6F000D540C1 /* GlyphInputPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2729801A05D4E6F000D540C1 /* GlyphInputPanel.nib */; };
+		2729805705D4ECB600D540C1 /* DefaultKeyBinding.dict in Resources */ = {isa = PBXBuildFile; fileRef = 2729805605D4ECB600D540C1 /* DefaultKeyBinding.dict */; };
+		8D5B49AE048680CD000E48DA /* GlyphInputInputManager_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF630370AF2F00C91783 /* GlyphInputInputManager_Prefix.pch */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		910AB3000C95AE7A00AF349B /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 910AB2FF0C95AE7A00AF349B /* MethodSwizzle.m */; };
+		912B59720CB9C09900BF76AF /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912B59710CB9C09900BF76AF /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		27297FF205D4994000D540C1 /* NSTextView_GlyphInput.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSTextView_GlyphInput.h; sourceTree = "<group>"; };
+		27297FF305D4994000D540C1 /* NSTextView_GlyphInput.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSTextView_GlyphInput.m; sourceTree = "<group>"; };
+		27297FF405D4994000D540C1 /* GlyphInputController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GlyphInputController.h; sourceTree = "<group>"; };
+		27297FF505D4994000D540C1 /* GlyphInputController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GlyphInputController.m; sourceTree = "<group>"; };
+		27297FFA05D4995600D540C1 /* Info */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info; sourceTree = "<group>"; };
+		2729801B05D4E6F000D540C1 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GlyphInputPanel.nib; sourceTree = "<group>"; };
+		2729805605D4ECB600D540C1 /* DefaultKeyBinding.dict */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = DefaultKeyBinding.dict; sourceTree = "<group>"; };
+		32DBCF630370AF2F00C91783 /* GlyphInputInputManager_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlyphInputInputManager_Prefix.pch; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* GlyphInputInputManager.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlyphInputInputManager.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		910AB2FF0C95AE7A00AF349B /* MethodSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzle.m; sourceTree = "<group>"; };
+		912B59710CB9C09900BF76AF /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				912B59720CB9C09900BF76AF /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* IncrementalSearchInputManager */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = IncrementalSearchInputManager;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27297FFA05D4995600D540C1 /* Info */,
+				2729805605D4ECB600D540C1 /* DefaultKeyBinding.dict */,
+				2729801A05D4E6F000D540C1 /* GlyphInputPanel.nib */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				27297FF205D4994000D540C1 /* NSTextView_GlyphInput.h */,
+				27297FF305D4994000D540C1 /* NSTextView_GlyphInput.m */,
+				27297FF405D4994000D540C1 /* GlyphInputController.h */,
+				27297FF505D4994000D540C1 /* GlyphInputController.m */,
+				910AB2FF0C95AE7A00AF349B /* MethodSwizzle.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				912B59710CB9C09900BF76AF /* Carbon.framework */,
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* GlyphInputInputManager.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* GlyphInputInputManager_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D5B49AD048680CD000E48DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49AE048680CD000E48DA /* GlyphInputInputManager_Prefix.pch in Headers */,
+				27297FF605D4994000D540C1 /* NSTextView_GlyphInput.h in Headers */,
+				27297FF805D4994000D540C1 /* GlyphInputController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* GlyphInputInputManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 911B254A0BD6976C003800AB /* Build configuration list for PBXNativeTarget "GlyphInputInputManager" */;
+			buildPhases = (
+				8D5B49AD048680CD000E48DA /* Headers */,
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				2729810805D5A2A400D540C1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlyphInputInputManager;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = IncrementalSearchInputManager;
+			productReference = 8D5B49B6048680CD000E48DA /* GlyphInputInputManager.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 911B254E0BD6976C003800AB /* Build configuration list for PBXProject "GlyphInputInputManager" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* IncrementalSearchInputManager */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* GlyphInputInputManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				27297FFB05D4995600D540C1 /* Info in Resources */,
+				2729801C05D4E6F000D540C1 /* GlyphInputPanel.nib in Resources */,
+				2729805705D4ECB600D540C1 /* DefaultKeyBinding.dict in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2729810805D5A2A400D540C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$BUILD_DIR\"\nrm -rf GlyphInputInputManager\nmkdir GlyphInputInputManager\nmv \"$SOURCE_ROOT\"/build/Development/GlyphInputInputManager.bundle \"$BUILD_DIR\"/GlyphInputInputManager/\ncp \"$SOURCE_ROOT\"/Info \"$BUILD_DIR\"/GlyphInputInputManager/";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27297FF705D4994000D540C1 /* NSTextView_GlyphInput.m in Sources */,
+				27297FF905D4994000D540C1 /* GlyphInputController.m in Sources */,
+				910AB3000C95AE7A00AF349B /* MethodSwizzle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2729801A05D4E6F000D540C1 /* GlyphInputPanel.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2729801B05D4E6F000D540C1 /* English */,
+			);
+			name = GlyphInputPanel.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		911B254B0BD6976C003800AB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GlyphInputInputManager_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = GlyphInputInputManager;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		911B254C0BD6976C003800AB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GlyphInputInputManager_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = GlyphInputInputManager;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		911B254D0BD6976C003800AB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GlyphInputInputManager_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = GlyphInputInputManager;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Default;
+		};
+		911B254F0BD6976C003800AB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		911B25500BD6976C003800AB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		911B25510BD6976C003800AB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		911B254A0BD6976C003800AB /* Build configuration list for PBXNativeTarget "GlyphInputInputManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911B254B0BD6976C003800AB /* Development */,
+				911B254C0BD6976C003800AB /* Deployment */,
+				911B254D0BD6976C003800AB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		911B254E0BD6976C003800AB /* Build configuration list for PBXProject "GlyphInputInputManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911B254F0BD6976C003800AB /* Development */,
+				911B25500BD6976C003800AB /* Deployment */,
+				911B25510BD6976C003800AB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

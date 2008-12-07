@@ -1,0 +1,6 @@
+/* Either add these to ~/Library/KeyBindings/DefaultKeyBinding.dict or make this that file. */
+{
+	/* Glyph Input */
+	"§" = "insertGlyphRepresentationOfKeyEquivalent:";
+	"^§" = "insertTextualRepresentationOfKeyEquivalent:";
+}
