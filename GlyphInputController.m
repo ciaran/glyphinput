@@ -161,49 +161,49 @@ const int ForwardDeleteGlyphValue = 0x2326;
 	if ([event type] == NSKeyDown && [[[GlyphInputController sharedGlyphInputController] window] isVisible]) {
 		char charCode;
 		GetEventParameter((EventRef)[event eventRef], kEventParamKeyMacCharCodes, typeChar, NULL, sizeof(char), NULL, &charCode);
-		unichar key = 0;
 
 		NSMutableString *glyphs = [self stringRepresentingModifierFlags:[event modifierFlags]];
 		if (![[GlyphInputController sharedGlyphInputController] textualMode]) {
+			unichar key = 0;
 			switch ([[event charactersIgnoringModifiers] characterAtIndex:0]) {
-				case NSLeftArrowFunctionKey:	key = LeftArrowGlyphValue; break;
-				case NSRightArrowFunctionKey:	key = RightArrowGlyphValue; break;
-				case NSUpArrowFunctionKey:		key = UpArrowGlyphValue; break;
-				case NSDownArrowFunctionKey:	key = DownArrowGlyphValue; break;
-				case NSPageDownFunctionKey:	key = PageDownGlyphValue; break;
-				case NSPageUpFunctionKey:		key = PageUpGlyphValue; break;
-				case NSHomeFunctionKey:			key = HomeGlyphValue; break;
-				case NSEndFunctionKey:			key = EndGlyphValue; break;
-				case NSTabCharacter:				key = TabGlyphValue; break;
-				case 32:								key = SpaceGlyphValue; break;
-				case 13:								key = EnterGlyphValue; break;
-				case NSEnterCharacter:			key = ReturnGlyphValue; break;
-				case 27:								key = EscapeGlyphValue; break;
-				case 127:							key = DeleteGlyphValue; break;
-				case 63272:							key = ForwardDeleteGlyphValue; break;
+				case NSLeftArrowFunctionKey:  key = LeftArrowGlyphValue;     break;
+				case NSRightArrowFunctionKey: key = RightArrowGlyphValue;    break;
+				case NSUpArrowFunctionKey:    key = UpArrowGlyphValue;       break;
+				case NSDownArrowFunctionKey:  key = DownArrowGlyphValue;     break;
+				case NSPageDownFunctionKey:   key = PageDownGlyphValue;      break;
+				case NSPageUpFunctionKey:     key = PageUpGlyphValue;        break;
+				case NSHomeFunctionKey:       key = HomeGlyphValue;          break;
+				case NSEndFunctionKey:        key = EndGlyphValue;           break;
+				case NSTabCharacter:          key = TabGlyphValue;           break;
+				case 32:                      key = SpaceGlyphValue;         break;
+				case 13:                      key = EnterGlyphValue;         break;
+				case NSEnterCharacter:        key = ReturnGlyphValue;        break;
+				case 27:                      key = EscapeGlyphValue;        break;
+				case 127:                     key = DeleteGlyphValue;        break;
+				case 63272:                   key = ForwardDeleteGlyphValue; break;
 			}
 			if(key)
 				[glyphs appendString:[[NSString stringWithFormat:@"%C",key] uppercaseString]];
 			else
 				[glyphs appendString:[[NSString stringWithFormat:@"%c",charCode] uppercaseString]];
 		} else {
-			NSString *string = nil;//[[NSString stringWithFormat:@"%C",key] uppercaseString];
+			NSString *string = nil;
 			switch ([[event charactersIgnoringModifiers] characterAtIndex:0]) {
-				case NSLeftArrowFunctionKey:	string = @"Left"; break;
-				case NSRightArrowFunctionKey:	string = @"Right"; break;
-				case NSUpArrowFunctionKey:		string = @"Up"; break;
-				case NSDownArrowFunctionKey:	string = @"Down"; break;
-				case NSPageDownFunctionKey:	string = @"Page-Down"; break;
-				case NSPageUpFunctionKey:		string = @"Page-Up"; break;
-				case NSHomeFunctionKey:			string = @"Home"; break;
-				case NSEndFunctionKey:			string = @"End"; break;
-				case NSTabCharacter:				string = @"Tab"; break;
-				case 32:								string = @"Space"; break;
-				case 13:								string = @"Return"; break;
-				case NSEnterCharacter:			string = @"Enter"; break;
-				case 27:								string = @"Escape"; break;
-				case 127:							string = @"Delete"; break;
-				case 63272:							string = @"Forward-Delete"; break;
+				case NSLeftArrowFunctionKey:  string = @"Left";              break;
+				case NSRightArrowFunctionKey: string = @"Right";             break;
+				case NSUpArrowFunctionKey:    string = @"Up";                break;
+				case NSDownArrowFunctionKey:  string = @"Down";              break;
+				case NSPageDownFunctionKey:   string = @"Page-Down";         break;
+				case NSPageUpFunctionKey:     string = @"Page-Up";           break;
+				case NSHomeFunctionKey:       string = @"Home";              break;
+				case NSEndFunctionKey:        string = @"End";               break;
+				case NSTabCharacter:          string = @"Tab";               break;
+				case 32:                      string = @"Space";             break;
+				case 13:                      string = @"Return";            break;
+				case NSEnterCharacter:        string = @"Enter";             break;
+				case 27:                      string = @"Escape";            break;
+				case 127:                     string = @"Delete";            break;
+				case 63272:                   string = @"Forward-Delete";    break;
 			}
 			if(string)
 				[glyphs appendString:string];
