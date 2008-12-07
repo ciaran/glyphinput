@@ -45,14 +45,6 @@ const int ForwardDeleteGlyphValue = 0x2326;
 	return self;
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
-
-- (void)windowDidLoad {
-    [super windowDidLoad];
-}
-
 - (void)windowDidResignKey:(NSNotification *)aNotification
 {
 	if (hotKeyModeToken != 0)
