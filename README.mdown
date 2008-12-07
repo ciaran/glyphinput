@@ -1,0 +1,5 @@
+# What Is It?
+
+This is an Input Manager for OS X which allows one to quickly insert the glyph representation of a keystroke (e.g. `⇧⌘F`) into any text field. 
+
+I originally wrote this while learning Objective-C/Cocoa, and the project was based on Michael McCracken’s Incremental Search Input Manager (ISIM).
