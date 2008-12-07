@@ -118,29 +118,23 @@ const int ForwardDeleteGlyphValue = 0x2326;
 - (NSMutableString *)stringRepresentingModifierFlags:(unsigned int)modifierFlags
 {
 	NSMutableString *glyphs = [NSMutableString string];
-	if (modifierFlags & NSControlKeyMask) {
-		if (![[GlyphInputController sharedGlyphInputController] textualMode])
-			[glyphs appendString:[NSString stringWithFormat:@"%C",ControlGlyphValue]];
-		else
-			[glyphs appendString:@"Control-"];
-	}
-	if (modifierFlags & NSAlternateKeyMask) {
-		if (![[GlyphInputController sharedGlyphInputController] textualMode])
-			[glyphs appendString:[NSString stringWithFormat:@"%C",OptionGlyphValue]];
-		else
-			[glyphs appendString:@"Option-"];
-	}
-	if (modifierFlags & NSShiftKeyMask) {
-		if (![[GlyphInputController sharedGlyphInputController] textualMode])
-			[glyphs appendString:[NSString stringWithFormat:@"%C",ShiftGlyphValue]];
-		else
-			[glyphs appendString:@"Shift-"];
-	}
-	if (modifierFlags & NSCommandKeyMask) {
-		if (![[GlyphInputController sharedGlyphInputController] textualMode])
-			[glyphs appendString:[NSString stringWithFormat:@"%C",CommandGlyphValue]];
-		else
-			[glyphs appendString:@"Command-"];
+	struct {
+		int mask;
+		int glyphValue;
+		NSString* textualName;
+	} flags[] = {
+		{ NSControlKeyMask,   ControlGlyphValue,  @"Control" },
+		{ NSAlternateKeyMask, OptionGlyphValue,   @"Option"  },
+		{ NSShiftKeyMask,     ShiftGlyphValue,    @"Shift"   },
+		{ NSCommandKeyMask,   CommandGlyphValue,  @"Command" },
+	};
+	for (size_t index = 0; index < sizeof(flags) / sizeof(flags[0]); ++index) {
+		if(modifierFlags & flags[index].mask) {
+			if (![[GlyphInputController sharedGlyphInputController] textualMode])
+				[glyphs appendString:[NSString stringWithFormat:@"%C", flags[index].glyphValue]];
+			else
+				[glyphs appendFormat:@"%@-", flags[index].textualName];
+		}
 	}
 	return glyphs;
 }
