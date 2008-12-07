@@ -1,6 +1,6 @@
 #import "GlyphInputController.h"
 #import <stdlib.h>
-#import "MethodSwizzle.h"
+#import "JRSwizzle.h"
 
 const int CommandGlyphValue       = 0x2318;
 const int ShiftGlyphValue         = 0x21E7;
@@ -33,8 +33,8 @@ const int ForwardDeleteGlyphValue = 0x2326;
 
 + (void)initialize
 {
-	if ([[NSApplication class] respondsToSelector:@selector(mySendEvent:)]) return;
-	MethodSwizzle([NSApplication class], @selector(sendEvent:), @selector(mySendEvent:));
+	if (![[NSApplication class] respondsToSelector:@selector(GlyphInput_sendEvent:)])
+		[[NSApplication class] jr_swizzleMethod:@selector(sendEvent:) withMethod:@selector(GlyphInput_sendEvent:) error:NULL];
 }
 
 - (id)init {
@@ -142,7 +142,7 @@ const int ForwardDeleteGlyphValue = 0x2326;
 	return !(modifierFlags & NSShiftKeyMask || modifierFlags & NSControlKeyMask || modifierFlags & NSAlternateKeyMask || modifierFlags & NSCommandKeyMask);
 }
 
-- (void)mySendEvent:(NSEvent *)event
+- (void)GlyphInput_sendEvent:(NSEvent *)event
 {
 	if ([event type] == NSKeyDown && [[[GlyphInputController sharedGlyphInputController] window] isVisible]) {
 		char charCode;
@@ -201,11 +201,10 @@ const int ForwardDeleteGlyphValue = 0x2326;
 		if (![self hasNoModifiers:[[GlyphInputController sharedGlyphInputController] lastModifierFlags]] &&
 			[self hasNoModifiers:[event modifierFlags]]) {
 			[self insertTextAndClose:[self stringRepresentingModifierFlags:[[GlyphInputController sharedGlyphInputController] lastModifierFlags]]];
-			return;
 		}
 		[[GlyphInputController sharedGlyphInputController] setLastModifierFlags:[event modifierFlags]];
 	} else {
-		[self mySendEvent:event];
+		[self GlyphInput_sendEvent:event];
 	}
 }
 @end

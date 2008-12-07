@@ -17,8 +17,8 @@
 		8D5B49AE048680CD000E48DA /* GlyphInputInputManager_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF630370AF2F00C91783 /* GlyphInputInputManager_Prefix.pch */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
-		910AB3000C95AE7A00AF349B /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 910AB2FF0C95AE7A00AF349B /* MethodSwizzle.m */; };
 		912B59720CB9C09900BF76AF /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912B59710CB9C09900BF76AF /* Carbon.framework */; };
+		9185714C0EEC8E4600B9C83E /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9185714B0EEC8E4600B9C83E /* JRSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		32DBCF630370AF2F00C91783 /* GlyphInputInputManager_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlyphInputInputManager_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* GlyphInputInputManager.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlyphInputInputManager.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		910AB2FF0C95AE7A00AF349B /* MethodSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzle.m; sourceTree = "<group>"; };
 		912B59710CB9C09900BF76AF /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		9185714B0EEC8E4600B9C83E /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 				27297FF305D4994000D540C1 /* NSTextView_GlyphInput.m */,
 				27297FF405D4994000D540C1 /* GlyphInputController.h */,
 				27297FF505D4994000D540C1 /* GlyphInputController.m */,
-				910AB2FF0C95AE7A00AF349B /* MethodSwizzle.m */,
+				9185714B0EEC8E4600B9C83E /* JRSwizzle.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 			files = (
 				27297FF705D4994000D540C1 /* NSTextView_GlyphInput.m in Sources */,
 				27297FF905D4994000D540C1 /* GlyphInputController.m in Sources */,
-				910AB3000C95AE7A00AF349B /* MethodSwizzle.m in Sources */,
+				9185714C0EEC8E4600B9C83E /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
